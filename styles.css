@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root{
+  --cream:#fff9e8; --paper:#fffdf7; --gold:#d6a52c; --dark:#4a2e20;
+  --rose:#b43c38; --orange:#e87828; --yellow:#f5c842;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--dark);font-family:Montserrat,Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#b78931 0.7px,transparent .7px);background-size:18px 18px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:32px 20px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,#fff0a6,transparent 68%);z-index:-1}
+.hero-content{max-width:780px}
+.eyebrow,.section-kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:700;color:#a97917}
+h1,h2,.letter{font-family:"Cormorant Garamond",Georgia,serif}
+h1{font-size:clamp(3.2rem,9vw,7rem);line-height:.86;margin:18px 0;color:var(--dark)}
+h1 span{color:#b43c38;font-style:italic}
+.intro{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem;margin:28px 0 34px}
+.primary-btn,.music-btn{border:0;cursor:pointer;text-decoration:none;display:inline-block;border-radius:999px;padding:15px 24px;font-weight:700;transition:.25s;box-shadow:0 10px 25px #6e481d25}
+.primary-btn{background:#b43c38;color:#fff}
+.primary-btn:hover,.music-btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.hint{font-size:.78rem;opacity:.6;margin-top:15px}
+.surprise{max-width:1050px;margin:auto;padding:30px 20px 70px;opacity:0;display:none}
+.surprise.open{display:block;opacity:1}
+.reveal-item{opacity:0;transform:translateY(25px);animation:rise .8s ease forwards}
+.surprise.open .reveal-item:nth-child(1){animation-delay:.1s}.surprise.open .reveal-item:nth-child(2){animation-delay:.25s}
+.surprise.open .reveal-item:nth-child(3){animation-delay:.4s}.surprise.open .reveal-item:nth-child(4){animation-delay:.55s}
+.surprise.open .reveal-item:nth-child(5){animation-delay:.7s}.surprise.open .reveal-item:nth-child(6){animation-delay:.85s}
+@keyframes rise{to{opacity:1;transform:none}}
+.music-card{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;background:#fff;border:1px solid #ead9a5;border-radius:20px;margin-bottom:22px;box-shadow:0 12px 35px #6e481d12}
+.music-card>div{display:flex;align-items:center;gap:14px}.music-icon{font-size:2rem}
+.music-card p{margin:5px 0 0;font-size:.85rem;opacity:.7}.music-btn{background:#d6a52c;color:#fff}
+.counter-card{text-align:center;padding:35px 20px;border-radius:30px;background:linear-gradient(145deg,#fff8cf,#fff);border:1px solid #ead9a5}
+.counter-label{margin:0;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;font-weight:700}
+.counter{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(5rem,15vw,10rem);font-weight:700;line-height:.85;color:#b43c38;margin:18px 0 5px}
+.days{font-size:1.2rem;font-weight:700;margin:0}.counter-note{opacity:.6;font-size:.85rem}
+.letter{background:var(--paper);padding:clamp(30px,7vw,70px);margin:24px 0;border-radius:4px;box-shadow:0 18px 50px #5d3c1a1b;position:relative}
+.letter:before{content:"";position:absolute;inset:12px;border:1px solid #e4d2a0;pointer-events:none}
+.letter>*{position:relative}.letter-top{text-transform:uppercase;letter-spacing:.16em;font:700 .7rem Montserrat;color:#b43c38}
+.letter h2{font-size:2.7rem;margin:10px 0 20px}.letter p{font-size:1.2rem;line-height:1.75}
+.signature{text-align:right;margin-top:35px!important;color:#b43c38;font-weight:600}
+.memories,.flowers{text-align:center;padding:45px 0}
+.memories h2,.flowers h2{font-size:clamp(2.4rem,6vw,4rem);margin:5px 0 25px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery figure{margin:0;background:#fff;padding:10px 10px 16px;box-shadow:0 10px 25px #6e481d18;transform:rotate(-1deg)}
+.gallery figure:nth-child(2){transform:rotate(1deg)}.gallery figure:nth-child(3){transform:rotate(-.5deg)}
+.gallery img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.gallery figcaption{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;margin-top:10px}
+.bouquet{height:300px;position:relative;max-width:520px;margin:10px auto 0}
+.stems{position:absolute;left:50%;top:125px;width:8px;height:165px;background:#64823c;transform:translateX(-50%) rotate(-2deg);border-radius:10px}
+.stems:before,.stems:after{content:"";position:absolute;width:95px;height:35px;border:7px solid #64823c;border-top:0;border-left:0;border-radius:0 0 80% 0;top:70px;left:-75px;transform:rotate(-25deg)}
+.stems:after{left:0;top:105px;transform:scaleX(-1) rotate(-25deg)}
+.flower{position:absolute;width:100px;height:100px;left:50%;top:30px;transform:translateX(-50%);z-index:2}
+.flower:nth-child(1){left:32%;top:55px}.flower:nth-child(2){left:50%;top:15px}.flower:nth-child(3){left:68%;top:60px}
+.flower.small{transform:translateX(-50%) scale(.7);top:125px}.flower:nth-child(4){left:43%}.flower:nth-child(5){left:58%}
+.flower i{position:absolute;left:30px;top:0;width:40px;height:58px;border-radius:50%;transform-origin:20px 50px}
+.flower i:nth-child(1){transform:rotate(0)}.flower i:nth-child(2){transform:rotate(72deg)}.flower i:nth-child(3){transform:rotate(144deg)}.flower i:nth-child(4){transform:rotate(216deg)}.flower i:nth-child(5){transform:rotate(288deg)}
+.yellow i{background:var(--yellow)}.red i{background:var(--rose)}.orange i{background:var(--orange)}
+.flower b{position:absolute;width:25px;height:25px;background:#8c5b27;border-radius:50%;left:37px;top:37px;z-index:3}
+.flower-message{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem}
+.footer{text-align:center;padding:35px 0;border-top:1px solid #e5d6ae;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;opacity:.65}
+.petals{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
+.petal{position:absolute;top:-30px;width:12px;height:18px;border-radius:70% 30% 70% 30%;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:.2}}
+@media(max-width:700px){
+  .gallery{grid-template-columns:1fr}
+  .gallery figure{max-width:430px;margin:auto}
+  .music-card{align-items:flex-start;flex-direction:column}
+  .music-btn{width:100%;text-align:center}
+  .letter p{font-size:1.05rem}
+}
